@@ -18,10 +18,6 @@ module.exports = [
         'first-contentful-paint': {
           numericValue: '>2000',
         },
-        // TODO: ?
-        // 'first-cpu-idle': {
-        //   numericValue: '>2000',
-        // },
         'interactive': {
           numericValue: '>2000',
         },
