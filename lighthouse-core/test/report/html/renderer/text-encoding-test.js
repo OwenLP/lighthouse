@@ -21,8 +21,8 @@ describe('TextEncoding', () => {
   /** @type {string} */
   async function test(str) {
     for (const gzip of [false, true]) {
-      const binary = await TextEncoding.encode(str, {gzip});
-      const roundtrip = TextEncoding.decode(binary, {gzip});
+      const binary = await TextEncoding.toBase64(str, {gzip});
+      const roundtrip = TextEncoding.fromBase64(binary, {gzip});
       expect(roundtrip.length).toEqual(str.length);
       expect(roundtrip).toEqual(str);
     }
